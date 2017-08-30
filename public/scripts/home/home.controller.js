@@ -43,27 +43,15 @@ angular.module('app').controller('homeCtrl', function($scope){
     function textChange(){
         var namesNStuff = [
           'Web Developer',
-          'Hiker',
-          'SnowBoarder',
           'Husband',
-          'Exercise Enthusiast',
-          'Astronomy Lover',
-          'Movie Goer',
           'Seafood Eater',
-          'Mac Lover',
           'CSS Enthusiest',
           'Brazil Traveler',
           'Father',
-          'Ninja Killer',
-          'Dragon Slayer',
           'Metal Gear Solid Fan',
           'Mud Digger',
           'Audio Book Listener',
-          'Fitness Maniac',
-          'Entrepreneur',
-          'Brother Wrestler',
-          'All Around Stud Muffin',
-          '....trust me you want this guy',
+
       ];
       txt1.text = namesNStuff[i];
       i++;

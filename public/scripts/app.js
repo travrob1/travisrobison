@@ -6,7 +6,7 @@ app.config(['$routeProvider', function($routeProvider){
   $routeProvider
     .otherwise({
       redirectTo: "/",
-      templateUrl: "../views/home.html",
+      templateUrl: "scripts/home/home.html",
       controller: 'homeCtrl'
     });
 }]);
