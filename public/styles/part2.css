@@ -1,0 +1,147 @@
+
+#section-angular .st0 {
+  display: none;
+}
+#section-angular .st1 {
+  display: inline;
+}
+#section-angular .st2 {
+  fill: none;
+  stroke: #E11E16;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1950;
+}
+#section-angular .st3 {
+  fill: none;
+  stroke: #AF1209;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1950;
+}
+#section-angular .st4 {
+  fill: none;
+  stroke: #231F20;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 602;
+}
+#section-angular .st5 {
+  fill: none;
+  stroke: #AF1209;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 580;
+}
+#section-angular .st6 {
+  fill: #ECECEC;
+  stroke: #BBBBBB;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1000;
+}
+#section-angular .st7 {
+  fill: #ECECEC;
+  stroke: #BBBBBB;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 400;
+}
+#section-angular .st8 {
+  display: none;
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 400;
+}
+
+#section-html5 svg {
+  width: 450px;
+  margin: 0 auto;
+  display: block;
+}
+#section-html5 .st0 {
+  display: none;
+}
+#section-html5 .st1 {
+  fill: none;
+  stroke: #F26722;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+#section-html5 .st1-orange {
+  fill: none;
+  stroke: #F26722;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1780;
+  stroke-dashoffset: 1780;
+}
+#section-html5 .st2 {
+  fill: #FDFDFE;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 750;
+  stroke-dashoffset: 750;
+}
+#section-html5 .st3 {
+  fill: #FFFFFF;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 660;
+  stroke-dashoffset: 660;
+}
+#section-html5 .st4 {
+  fill: none;
+}
+#section-html5 .st5 {
+  fill: none;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+#section-css3 svg {
+  width: 370px;
+  margin: 0 auto;
+  display: block;
+}
+#section-css3 .st0 {
+  fill: none;
+  stroke: #0075B7;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1600;
+  stroke-dashoffset: 1600;
+}
+#section-css3 .st1 {
+  fill: none;
+  stroke: #00AADD;
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+#section-css3 .st2 {
+  fill: none;
+  stroke: #00AADD;
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 2150;
+  stroke-dashoffset: 2150;
+}
+#section-css3 .st3 {
+  fill: #ECECEC;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 927;
+  stroke-dashoffset: 927;
+}
+#section-css3 .st4 {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 164;
+  stroke-dashoffset: 164;
+}
+#section-css3 .st8 {
+  fill: #0075b7;
+}

@@ -1,0 +1,148 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.fds {
+    margin: 0 0 0 0;
+}
+
+/* Space out content a bit */
+
+body{height:100% !important;}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+  /* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+   margin-top: 28px;
+}
+
+#banner {
+
+  background: #380347; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #380347 0%, #811c10 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#380347), color-stop(100%,#811c10)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #380347 0%,#811c10 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #380347 0%,#811c10 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #380347 0%,#811c10 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #380347 0%,#811c10 100%); /* W3C */
+  position: fixed;
+  top:0;
+  z-index: 1;
+}
+
+
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #380347; /* Old browsers */
+  background: -moz-linear-gradient(left,  rgba(56, 3, 71, 0.38) 0%, rgba(129, 28, 16, 0.57) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(56, 3, 71, 0.38)), color-stop(100%,rgba(129, 28, 16, 0.57))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  rgba(56, 3, 71, 0.38) 0%,rgba(129, 28, 16, 0.57) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  rgba(56, 3, 71, 0.38) 0%,rgba(129, 28, 16, 0.57) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  rgba(56, 3, 71, 0.38) 0%,rgba(129, 28, 16, 0.57) 100%); /* IE10+ */
+  background: linear-gradient(to right,  rgba(56, 3, 71, 0.38) 0%,rgba(129, 28, 16, 0.57) 100%); /* W3C */
+  background: linear-gradient(to right, rgba(56, 3, 71, 0.38) 0%, rgba(129, 28, 16, 0.57) 100%);
+
+  border-color: transparent;
+  border-bottom: 1px solid #e7e7e7;
+  z-index: 5;
+}
+
+.navbar-brand {
+  margin-top: -8px;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+  color: #FFF;
+  background-color: rgba(3, 3, 3, 0.67);
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ffffff;
+}
+
+.content {
+  background-color: #ffffff;
+  z-index: 30;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.content section {
+  padding: 25px 0;
+}
+
+#svg-angular {
+  width: 450px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+#section-main .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.section-grey {
+  background-color: #ECECEC;
+}
+
+.section-blue {
+  background-color: #0075B7;
+  color: #fff
+}
