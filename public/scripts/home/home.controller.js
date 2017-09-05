@@ -1,8 +1,6 @@
-'use strict';
-
-/* global angular, $, createjs, skrollr */
+/* global angular, $, createjs, skrollr, document, window, Image */
 angular.module('app').controller('homeCtrl', function($scope){
-  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,txt2, i = 0, tweenLength = 1500;
+  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1, tweenLength = 1500;
 
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -33,10 +31,20 @@ angular.module('app').controller('homeCtrl', function($scope){
     txt1.x = canvas.width/2;
     txt1.y = canvas.height/2;
 
+    chevron = new createjs.Bitmap('../../images/chevron.png');
+    chevron.x = canvas.width/2 - 18;
+    chevron.y = canvas.height - 60;
+
+
     createjs.Tween.get(txt1, {loop: true})
-      .to({ alpha: 0 }, tweenLength)
-      .call(textChange)
-      .to({ alpha: 1}, tweenLength);
+        .to({ alpha: 0 }, 1500)
+        .call(textChange)
+        .to({ alpha: 1}, 1500);
+
+    createjs.Tween.get(chevron, {loop: true})
+        .to({ y: canvas.height - 60 }, 900)
+        .to({ y: canvas.height - 40 }, 900, createjs.Ease.bounceOut)
+        .to({ y: canvas.height - 60 }, 900);
 
 
 
@@ -50,35 +58,15 @@ angular.module('app').controller('homeCtrl', function($scope){
           'Father',
           'Metal Gear Solid Fan',
           'Mud Digger',
-          'Audio Book Listener',
-
+          'Audio Book Listener'
       ];
       txt1.text = namesNStuff[i];
       i++;
       tweenLength -= 200;
-      if(i > namesNStuff.length){
+      if(i == namesNStuff.length){
         i = 0;
       }
     }
-
-    $(window).scroll( function(){
-
-      /* Check the location of each desired element */
-      $('.hideme').each( function(){
-
-        var bottomOfObject = $(this).position().top + $(this).outerHeight();
-        var bottomOfWindow = $(window).scrollTop() + $(window).height();
-
-        /* If the object is completely visible in the window, fade it it */
-        if( bottomOfWindow > bottomOfObject ){
-
-          $(this).animate({'opacity':'1'},500);
-
-        }
-
-      });
-
-    });
 
     skrollr.init();
 
@@ -149,7 +137,6 @@ angular.module('app').controller('homeCtrl', function($scope){
     block.speed = (Math.random()*2+1);
   }
   function handleTick(){
-    //move the ships
 
       var l1 = bmpList1.length;
       for (var i = 0; i < l1; i++) {
@@ -163,8 +150,8 @@ angular.module('app').controller('homeCtrl', function($scope){
       }
 
     var l2 = bmpList2.length;
-    for (var i = 0; i < l2; i++) {
-      var bmp2 = bmpList2[i];
+    for (var ii = 0; ii < l2; ii++) {
+      var bmp2 = bmpList2[ii];
       if (bmp2.y > -150){
         bmp2.y -= bmp2.speed;
         bmp2.x += 0.5;
@@ -173,7 +160,7 @@ angular.module('app').controller('homeCtrl', function($scope){
       }
     }
     stage.addChild(txt1);
-    stage.addChild(txt2);
+    stage.addChild(chevron);
     stage.update();
   }
 
@@ -189,6 +176,9 @@ angular.module('app').controller('homeCtrl', function($scope){
 
     txt1.x = canvas.width/2;
     txt1.y = canvas.height/3;
+
+    chevron.x = canvas.width/2 - 18;
+    chevron.y = canvas.height - 60;
 
 };
 
