@@ -1,6 +1,6 @@
 /* global angular, $, createjs, skrollr, document, window, Image */
 angular.module('app').controller('homeCtrl', function($scope){
-  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1, tweenLength = 1500;
+  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1;
 
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -51,18 +51,17 @@ angular.module('app').controller('homeCtrl', function($scope){
     function textChange(){
         var namesNStuff = [
           'Web Developer',
+          'Movie Enthusiest',
           'Husband',
+          'Father',
           'Seafood Eater',
           'CSS Enthusiest',
           'Brazil Traveler',
-          'Father',
           'Metal Gear Solid Fan',
-          'Mud Digger',
           'Audio Book Listener'
       ];
       txt1.text = namesNStuff[i];
       i++;
-      tweenLength -= 200;
       if(i == namesNStuff.length){
         i = 0;
       }
@@ -95,7 +94,7 @@ angular.module('app').controller('homeCtrl', function($scope){
 
       for (var i = 0; i < 50; i++) {
         bitmap1 = new createjs.Bitmap(img1);
-
+        debugger
         stage.addChild(bitmap1);
         bitmap1.name = 'block' + i;
         bitmap1.addEventListener("mouseover", function(e) {
@@ -137,7 +136,6 @@ angular.module('app').controller('homeCtrl', function($scope){
     block.speed = (Math.random()*2+1);
   }
   function handleTick(){
-
       var l1 = bmpList1.length;
       for (var i = 0; i < l1; i++) {
         var bmp1 = bmpList1[i];
