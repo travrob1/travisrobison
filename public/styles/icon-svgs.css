@@ -30,14 +30,13 @@
 #section-angular .st6 {
   fill: #ECECEC;
   stroke: #BBBBBB;
-
-  stroke-dasharray: 1000;
+  stroke-dasharray: 1360;
 }
 #section-angular .st7 {
   fill: #ECECEC;
   stroke: #BBBBBB;
   stroke-linecap: round;
-  stroke-dasharray: 400;
+  stroke-dasharray: 720;
 }
 #section-angular .st8 {
   display: none;
