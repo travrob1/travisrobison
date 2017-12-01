@@ -1,5 +1,5 @@
 /* global angular, $, createjs, skrollr, document, window, Image */
-angular.module('app').controller('homeCtrl', function($scope){
+angular.module('app').controller('homeCtrl', function($scope, $timeout){
   var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1, tweenDatShit;
   var heroFontSize = '72px Poiret One';
   var diamondQuantity = 40;
@@ -62,7 +62,11 @@ angular.module('app').controller('homeCtrl', function($scope){
     tweenDatShit();
 
     if(w > 700){
-        skrollr.init();
+
+        $timeout(function(){
+            console.log('first');
+            skrollr.init();
+        }, 100);
     }
 
 
@@ -185,6 +189,8 @@ angular.module('app').controller('homeCtrl', function($scope){
     canvas.height = h;
     content.attr('style','margin-top:'+h+'px');
     if(w > 700){
+        console.log('resize');
+
         skrollr.init();
     }
 
