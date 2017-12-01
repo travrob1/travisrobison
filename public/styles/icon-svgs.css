@@ -22,7 +22,7 @@
   stroke: #231F20;
 }
 #section-angular .st4-n {
-    stroke-dasharray: 470;
+    stroke-dasharray: 472;
 }
 #section-angular .st4-g {
     stroke-dasharray: 380;
@@ -59,7 +59,7 @@
   fill: #ECECEC;
   stroke: #BBBBBB;
   stroke-linecap: round;
-  stroke-dasharray: 420;
+  stroke-dasharray: 422;
 }
 
 
@@ -82,7 +82,7 @@
   fill: none;
   stroke: #F26722;
   stroke-width: 10;
-  stroke-dasharray: 1580;
+  stroke-dasharray: 1585;
 }
 #section-html5 .st2 {
   fill: #FDFDFE;
@@ -100,7 +100,20 @@
 #section-html5 .st5 {
   fill: none;
   stroke: #000000;
-  stroke-dasharray: 149;
+}
+
+#section-html5 .st5-h {
+    stroke-dasharray: 133;
+}
+
+#section-html5 .st5-t {
+    stroke-dasharray: 98;
+}
+#section-html5 .st5-m {
+    stroke-dasharray: 150;
+}
+#section-html5 .st5-l {
+    stroke-dasharray: 92;
 }
 
 #section-css3 svg {
