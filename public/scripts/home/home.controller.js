@@ -1,10 +1,19 @@
 /* global angular, $, createjs, skrollr, document, window, Image */
 angular.module('app').controller('homeCtrl', function($scope){
-  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1;
+  var canvas, stage,brush, bmpList1,bitmap1, bmpList2, bitmap2, txt1,chevron, i = 1, tweenDatShit;
+  var heroFontSize = '72px Poiret One';
+  var diamondQuantity = 40;
 
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   var content = $('#skrollr-body');
+  if(w > 700 && w < 1000){
+      diamondQuantity = 30;
+  }
+  if(w <= 700){
+      heroFontSize = '40px Poiret One';
+      diamondQuantity = 15;
+  }
   $(document).ready(function(){
 
     canvas = document.getElementById('banner');
@@ -26,7 +35,7 @@ angular.module('app').controller('homeCtrl', function($scope){
     image2.category = 'large';
     image2.onload = createBlocks;
 
-    txt1 = new createjs.Text('Web Developer\n\n', '72px Poiret One', '#fff');
+    txt1 = new createjs.Text('Web Developer\n\n', heroFontSize, '#fff');
     txt1.textAlign = 'center';
     txt1.x = canvas.width/2;
     txt1.y = canvas.height/2;
@@ -40,37 +49,43 @@ angular.module('app').controller('homeCtrl', function($scope){
         .to({ alpha: 0 }, 1500)
         .call(textChange)
         .to({ alpha: 1}, 1500);
+    tweenDatShit = function (reset) {
+        // if(reset){
+        //     createjs.Tween.removeTweens(chevron)
+        // }
+        createjs.Tween.get(chevron, {loop: true})
+            .to({ y: canvas.height - 60 }, 900)
+            .to({ y: canvas.height - 40 }, 900, createjs.Ease.bounceOut)
+            .to({ y: canvas.height - 60 }, 900);
+    };
 
-    createjs.Tween.get(chevron, {loop: true})
-        .to({ y: canvas.height - 60 }, 900)
-        .to({ y: canvas.height - 40 }, 900, createjs.Ease.bounceOut)
-        .to({ y: canvas.height - 60 }, 900);
+    tweenDatShit();
 
-
-
-    function textChange(){
-        var namesNStuff = [
-          'Web Developer',
-          'Movie Enthusiest',
-          'Husband',
-          'Father',
-          'Seafood Eater',
-          'CSS Enthusiest',
-          'Brazil Traveler',
-          'Metal Gear Solid Fan',
-          'Audio Book Listener'
-      ];
-      txt1.text = namesNStuff[i];
-      i++;
-      if(i == namesNStuff.length){
-        i = 0;
-      }
+    if(w > 700){
+        skrollr.init();
     }
-
-    skrollr.init();
 
 
   });
+
+  function textChange(){
+      var namesNStuff = [
+        'Web Developer',
+        'Movie Enthusiest',
+        'Husband',
+        'Father',
+        'Seafood Eater',
+        'CSS Enthusiest',
+        'Brazil Traveler',
+        'Metal Gear Solid Fan',
+        'Audio Book Listener'
+    ];
+    txt1.text = namesNStuff[i];
+    i++;
+    if(i == namesNStuff.length){
+      i = 0;
+    }
+  }
 
   function toggleCache(value) {
     // iterate all the children except the fpsLabel, and set up the cache:
@@ -92,9 +107,8 @@ angular.module('app').controller('homeCtrl', function($scope){
 
       bmpList1 = [];
 
-      for (var i = 0; i < 50; i++) {
+      for (var i = 0; i < diamondQuantity; i++) {
         bitmap1 = new createjs.Bitmap(img1);
-        debugger
         stage.addChild(bitmap1);
         bitmap1.name = 'block' + i;
         bitmap1.addEventListener("mouseover", function(e) {
@@ -112,7 +126,7 @@ angular.module('app').controller('homeCtrl', function($scope){
       var img2 = e.target;
       bmpList2 = [];
 
-      for (var j = 0; j < 50; j++) {
+      for (var j = 0; j < diamondQuantity; j++) {
         bitmap2 = new createjs.Bitmap(img2);
         stage.addChild(bitmap2);
         bitmap2.name = 'block2' + j;
@@ -170,13 +184,16 @@ angular.module('app').controller('homeCtrl', function($scope){
     canvas.width  =  w;
     canvas.height = h;
     content.attr('style','margin-top:'+h+'px');
-    skrollr.init();
+    if(w > 700){
+        skrollr.init();
+    }
 
     txt1.x = canvas.width/2;
     txt1.y = canvas.height/3;
 
     chevron.x = canvas.width/2 - 18;
     chevron.y = canvas.height - 60;
+    tweenDatShit(true);
 
 };
 
