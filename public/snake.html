@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+        <script src="scripts/snake-engine.js"></script>
+        <link href="styles/snake.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <video id="bgvid" playsinline autoplay muted loop>
+            <source src="video/vid3.mp4" type="video/mp4">
+        </video>
+
+        <audio id="bg-audio" autoplay loop >
+          <source src="video/loop2.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- <div id="theDiv" >there is stuff here</div> -->
+        <div id="game-over" class="hidden">GAME OVER</div>
+        <div id="score">Score: <span>0</span></div>
+        <table >
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td class="snake head"></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+            <tr>
+                <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td><td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
+            </tr>
+        </table>
+
+
+
+    </body>
+</html>

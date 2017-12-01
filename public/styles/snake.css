@@ -1,0 +1,58 @@
+body {
+    background-color: #cdcdcd;
+}
+.hidden {
+    display: none;
+}
+table {
+    border: 1px solid darkgrey;
+    width: 640px;
+    margin: 20px auto;
+}
+tr {
+    border: 2px solid black
+}
+td {
+    height: 43px;
+}
+
+td.snake {
+    background-color: rgba(0, 255, 243, 0.84);
+}
+
+td.mark {
+    background-color: rgb(51, 255, 0);
+    box-shadow: 0 0 7px 6px #708bda;
+    border-radius: 20px;
+}
+#score {
+    margin: 0 auto;
+    display: block;
+    width: 201px;
+    font-size: 40px;
+    font-family: sans-serif;
+    color: white;
+}
+#game-over {
+    position: absolute;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: white;
+    left: 50%;
+    top: 351px;
+    margin-left: -151px;
+}
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    transition: 1s opacity;
+}
