@@ -7,7 +7,7 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   var content = $('#skrollr-body');
-  if(w > 700 && w < 1000){
+  if(w > 700 && w < 1025){
       diamondQuantity = 30;
   }
   if(w <= 700){
@@ -64,9 +64,8 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
     if(w > 700){
 
         $timeout(function(){
-            console.log('first');
             skrollr.init();
-        }, 100);
+        }, 1000);
     }
 
 
@@ -75,13 +74,14 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
   function textChange(){
       var namesNStuff = [
         'Web Developer',
+        'Angular',
+        'Sass',
         'Movie Enthusiest',
+        'Rocket League',
         'Husband',
-        'Father',
-        'Seafood Eater',
-        'CSS Enthusiest',
         'Brazil Traveler',
         'Metal Gear Solid Fan',
+        'Father',
         'Audio Book Listener'
     ];
     txt1.text = namesNStuff[i];
@@ -189,8 +189,6 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
     canvas.height = h;
     content.attr('style','margin-top:'+h+'px');
     if(w > 700){
-        console.log('resize');
-
         skrollr.init();
     }
 

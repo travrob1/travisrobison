@@ -1,5 +1,5 @@
 "use strict"
-/*global angular */
+/*global angular, navigator, localStorage */
 var app = angular.module("app", ['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
@@ -10,3 +10,22 @@ app.config(['$routeProvider', function($routeProvider){
       controller: 'homeCtrl'
     });
 }]);
+
+app.run(function ($rootScope, $timeout) {
+    var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+
+
+    if (isMobile && !localStorage.getItem('seenMobileMessage')) {
+        $rootScope.onMobileDevice = true;
+        localStorage.setItem("seenMobileMessage", true);
+
+        $timeout(function () {
+            $rootScope.slideWarning = true;
+        },5000);
+        $timeout(function(){
+            $rootScope.onMobileDevice = false;
+
+        },6500);
+    }
+
+});

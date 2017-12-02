@@ -6,7 +6,7 @@ $( document ).ready(function() {
     var direction = 'DOWN';
     var hitMark = false;
     var snake = [{x: 7, y: 7, head: true}];
-    var timing = 300;
+    var timing = 240;
     var stopTimer = false;
     var score = 0;
     var audio = document.getElementById("bg-audio");
