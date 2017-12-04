@@ -1,19 +1,18 @@
-"use strict"
+"use strict";
 /*global angular, navigator, localStorage */
+
 var app = angular.module("app", ['ngRoute']);
 
-app.config(['$routeProvider', function($routeProvider){
-  $routeProvider
-    .otherwise({
-      redirectTo: "/",
-      templateUrl: "scripts/home/home.html",
-      controller: 'homeCtrl'
+app.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.otherwise({
+        redirectTo: "/",
+        templateUrl: "scripts/home/home.html",
+        controller: 'homeCtrl'
     });
 }]);
 
 app.run(function ($rootScope, $timeout) {
-    let isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
-
+    var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
 
     if (isMobile && !localStorage.getItem('seenMobileMessage')) {
         $rootScope.onMobileDevice = true;
@@ -21,11 +20,10 @@ app.run(function ($rootScope, $timeout) {
 
         $timeout(function () {
             $rootScope.slideWarning = true;
-        },5000);
-        $timeout(function(){
+        }, 5000);
+        $timeout(function () {
             $rootScope.onMobileDevice = false;
-
-        },6500);
+        }, 6500);
     }
-
 });
+//# sourceMappingURL=app.js.map

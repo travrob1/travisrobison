@@ -71,7 +71,7 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
 
   });
 
-  function textChange(){
+   textChange() => {
       var namesNStuff = [
         'Web Developer',
         'Angular',
@@ -91,7 +91,7 @@ angular.module('app').controller('homeCtrl', function($scope, $timeout){
     }
   }
 
-  function toggleCache(value) {
+  toggleCache(value) => {
     // iterate all the children except the fpsLabel, and set up the cache:
     var l = stage.getNumChildren() - 1;
 
