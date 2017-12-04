@@ -12,3 +12,7 @@ gulp.task('default', () =>
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('public/compiled-scripts'))
 );
+
+gulp.task('watch', ()=> {
+    gulp.watch(['public/scripts/**/*.js', '!public/scripts/vendor/**'], ['default']);
+});
