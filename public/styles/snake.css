@@ -1,5 +1,7 @@
 body {
     background-color: #cdcdcd;
+    font-family: sans-serif;
+
 }
 .hidden {
     display: none;
@@ -30,7 +32,6 @@ td.mark {
     display: block;
     width: 201px;
     font-size: 40px;
-    font-family: sans-serif;
     color: white;
 }
 #game-over {
@@ -55,4 +56,8 @@ video {
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
     transition: 1s opacity;
+}
+h1 {
+    text-align: center;
+    color: white;
 }
